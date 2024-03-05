@@ -52,6 +52,7 @@
 #define BEEPER_PIN           PC13
 #define BEEPER_INVERTED
 #define OSD_DISPLAYPORT_DEVICE MAX7456
+#define LED_STRIP_PIN        PB3
 
 // ACC/GYRO SPI 1
 #define USE_SPI_GYRO
@@ -115,15 +116,13 @@
     TIMER_PIN_MAP( 3, PC8 , 1,  0) \
     TIMER_PIN_MAP( 4, PB3 , 1,  0)
 
-#define ADC1_DMA_OPT         1
-
 // MOTORS PINOUT
 #define MOTOR1_PIN           PA9
 #define MOTOR2_PIN           PA8
 #define MOTOR3_PIN           PC9
 #define MOTOR4_PIN           PC8
 
-#define ADC3_DMA_OPT         0
+#define ADC1_DMA_OPT         1
 
 // BARO I2C
 #define USE_BARO
@@ -144,8 +143,6 @@
 #define DEFAULT_VOLTAGE_METER_SOURCE    VOLTAGE_METER_ADC
 #define DEFAULT_DSHOT_BURST DSHOT_DMAR_OFF
 #define DEFAULT_DSHOT_BITBANG DSHOT_BITBANG_OFF
-
-#define LED_STRIP_PIN        PB3
 
 // DISABLED
 // #define INVERTER_PIN_UART1   PC0
