@@ -27,15 +27,9 @@
 #define MANUFACTURER_ID   CUST
 
 #define USE_ACC
+#define USE_ACC_SPI_MPU6000
 #define USE_GYRO
-
-#define USE_ACC_SPI_MPU6000 // For MPU6000 variation
-#define USE_GYRO_SPI_MPU6000 // For MPU6000 variation
-
-#define USE_ACC_SPI_ICM42688P // For ICM42688P variation
-#define USE_GYRO_SPI_ICM42688P // For ICM42688P variation
-
-#define USE_ACCGYRO_BMI270 // For BMI270 variation
+#define USE_GYRO_SPI_MPU6000
 
 #define USE_BARO_BMP280
 
@@ -109,13 +103,13 @@
 
 // TIMERS
 #define TIMER_PIN_MAPPING \
-    TIMER_PIN_MAP( 0, PB9 , 2, -1) \
-    TIMER_PIN_MAP( 1, PA9 , 1,  0) \
-    TIMER_PIN_MAP( 2, PA8 , 1,  0) \
-    TIMER_PIN_MAP( 3, PC9 , 2,  0) \
-    TIMER_PIN_MAP( 4, PC8 , 2,  0) \
-    TIMER_PIN_MAP( 5, PB8 , 1,  0)
-    //TIMER_PIN_MAP( 6, PB3 , 1,  0)
+    TIMER_PIN_MAP( 0, PA9 , 1,  1) \
+    TIMER_PIN_MAP( 1, PA8 , 1,  1) \
+    TIMER_PIN_MAP( 2, PC9 , 1,  0) \
+    TIMER_PIN_MAP( 3, PC8 , 1,  0) \
+    TIMER_PIN_MAP( 4, PB3 , 1,  0)
+
+#define ADC1_DMA_OPT         1
 
 // MOTORS PINOUT
 #define MOTOR1_PIN           PA9
@@ -142,9 +136,11 @@
 #define DEFAULT_BLACKBOX_DEVICE         BLACKBOX_DEVICE_FLASH
 #define DEFAULT_CURRENT_METER_SOURCE    CURRENT_METER_ADC
 #define DEFAULT_VOLTAGE_METER_SOURCE    VOLTAGE_METER_ADC
-#define DEFAULT_DSHOT_BURST DSHOT_DMAR_ON
+#define DEFAULT_DSHOT_BURST DSHOT_DMAR_OFF
+#define DEFAULT_DSHOT_BITBANG DSHOT_BITBANG_OFF
+
+#define LED_STRIP_PIN        PB3
 
 // DISABLED
 // #define INVERTER_PIN_UART1   PC0
-// #define LED_STRIP_PIN        PB3
 // #define ESCSERIAL_PIN        PB9
