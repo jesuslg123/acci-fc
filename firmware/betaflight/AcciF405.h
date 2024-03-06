@@ -87,7 +87,7 @@
 #define ADC_VBAT_PIN         PC1
 #define ADC_RSSI_PIN         PC2
 #define ADC_CURR_PIN         PC3
-#define ADC_INSTANCE ADC3
+#define ADC_INSTANCE         ADC1
 
 // UART PORTS
 #define UART1_TX_PIN         PB6
